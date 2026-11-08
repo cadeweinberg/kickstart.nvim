@@ -110,7 +110,9 @@ do
   vim.o.number = true
   -- You can also add relative line numbers, to help with jumping.
   --  Experiment for yourself to see if you like it!
-  -- vim.o.relativenumber = true
+  vim.o.relativenumber = true
+
+vim.opt.colorcolumn = "80"
 
   -- Enable mouse mode, can be useful for resizing splits for example!
   vim.o.mouse = 'a'
@@ -146,6 +148,13 @@ do
   -- Configure how new splits should be opened
   vim.o.splitright = true
   vim.o.splitbelow = true
+
+  -- For programming, Set the displayed number of characters when encountering
+  -- a TAB '\t' char to 4, instead of the default 8
+  vim.o.shiftwidth = 4
+
+  -- Cause vim to emit <shiftwidth> spaces when the TAB key is pressed
+  vim.o.expandtab = true
 
   -- Sets how neovim will display certain whitespace characters in the editor.
   --  See `:help 'list'`
